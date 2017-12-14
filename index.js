@@ -1,6 +1,5 @@
 ﻿const Discord = require('discord.js');
 const bot = new Discord.Client();
-const Google = require('./google')
 
 var prefix = (",")
 
@@ -41,7 +40,5 @@ bot.on('message', message => {
     if(message.content === prefix+ "stats"){
         message.channel.sendMessage("Il y a actuellement ${message.guild.channels.size} channels sur ce discord \n Il y a actuellement ${message.guilds.members.size} joueurs sur ce discord")
     }
-    if(Google.match(message)){
-        return Google.action(message)
-    }
+
 });
