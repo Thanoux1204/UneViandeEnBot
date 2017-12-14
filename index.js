@@ -8,14 +8,6 @@ bot.on('ready', function() {
     console.log("Connectedç");
 });
 
-bot.on('guildMemberAdd', function (member) {
-
-    member.creadteDM().then(function (channel) {
-
-        return channel.send('Bienvenue sur le discord ! Si tu à une question, hésite pas à demander a un modérateur ' + member.displayName)
-    }).catch(console.error)
-})
-
 bot.login(process.env.TOKEN);
 
 
